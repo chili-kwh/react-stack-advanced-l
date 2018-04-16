@@ -6,6 +6,8 @@ import createStore from '../store/createStore';
 import reducer, { key } from './rootReducer';
 
 /*
+https://github.com/TongchengQiu/react-redux-dynamic-injection
+https://qiutc.me/post/react-redux-dynamic-injection.html
 1. Root 根组件
 首先是创建了一个 Redux 的 store ，这里的 `createStore` 函数并没有用 Redux 中原生提供的，而是重新封装了一层来改造它；
 
