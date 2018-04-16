@@ -1,9 +1,7 @@
 {
-  "name": "react-redux-dynamic-injection",
-  "version": "0.1.0",
-  "author": "qiutc",
-  "email": "tongchengqiu@gmail.com",
-  "private": true,
+  "name": "react-stack-advanced",
+  "author": "liqi",
+  "email": "chili_kwh@163.com",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

@@ -5,6 +5,22 @@ import { Link, Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import createStore from '../store/createStore';
 import reducer, { key } from './rootReducer';
 
+/*
+1. Root 根组件
+首先是创建了一个 Redux 的 store ，这里的 `createStore` 函数并没有用 Redux 中原生提供的，而是重新封装了一层来改造它；
+
+它接收两个参数，第一个是初始化的状态数据，第二个是初始化的 reducer，这里传入的是一个名称为 `key` 的 reducer ，
+
+这里的 `key` 和 `reducer` 是在 `./src/pages/rootReducer.js` 中定义的，它用来存储一些通用和全局的状态数据和处理函数的；
+
+`lazyLoader` 函数是用来异步加载组件的，也就是通过不同的 route 来分割代码做按需加载，具体可参考  (code-splitting) ；
+
+他的用法就是在 `Route` 组件中传入的 `component` 使用 `lazyLoader(() => import('./List'))` 的方式来导入；
+
+接下来就是定义了一个 `Root` 组件并暴露，其中 `Provider` 是用来连接 Redux store 和 React 组件，这里需要传入 `store` 对象。
+*/
+
+
 export const store  = createStore({} , {
   [key]: reducer
 });
